@@ -1,0 +1,17 @@
+.logo-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.logo-label {
+  color: $white;
+  font-size: 12px;
+  word-wrap: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &__hide {
+    display: none;
+  }
+}

@@ -1,3 +1,13 @@
+<script>
+export default {
+  head() {
+    return {
+      title: `Главная | ${process.env.APP_NAME}`
+    };
+  }
+};
+</script>
+
 <template>
   <div class="container" />
 </template>

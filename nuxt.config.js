@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Национальные проекты Чувашии',
+    title: process.env.APP_NAME || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,13 +19,15 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#002344' },
   /*
   ** Global CSS
   */
   css: [
     '~assets/routes-transitions.scss',
     '~/static/sass/style.scss',
+    '~/static/less/variables.less',
+    '~/static/less/style.less',
     'ant-design-vue/dist/antd.css'
   ],
   /*
@@ -44,7 +46,7 @@ module.exports = {
     '@nuxtjs/stylelint-module'
   ],
   proxy: {
-    '/**': 'http://0.0.0.0:8000/'
+    '/api/**': 'http://0.0.0.0:3000/api'
   },
   /*
   ** Nuxt.js modules
@@ -67,6 +69,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    loaders: {
+      less: {
+        javascriptEnabled: true
+      }
+    },
     /*
     ** You can extend webpack config here
     */
