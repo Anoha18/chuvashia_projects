@@ -13,6 +13,14 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'nuxt/no-cjs-in-config': 'off'
+    'nuxt/no-cjs-in-config': 'off',
+    "no-console": "off",
+    "semi": [1, "always"],
+    "camelcase": ["warn", { "properties": "always" }],
+    "no-unused-vars":["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "eqeqeq": ["warn", "always"],
+    "no-undef": ["warn"],
+    "space-before-function-paren": ["warn", "never"],
+    "vue/no-unused-vars": ["warn"]
   }
 }
