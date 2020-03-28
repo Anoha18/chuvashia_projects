@@ -1,11 +1,12 @@
 
 module.exports = {
   mode: 'universal',
+  cache: true,
   /*
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Национальные проекты Чувашии',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,6 +24,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~assets/routes-transitions.scss',
+    '~/static/sass/style.scss',
     'ant-design-vue/dist/antd.css'
   ],
   /*
@@ -40,6 +43,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module'
   ],
+  proxy: {
+    '/**': 'http://0.0.0.0:8000/'
+  },
   /*
   ** Nuxt.js modules
   */
@@ -55,6 +61,7 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true
   },
   /*
   ** Build configuration
@@ -63,7 +70,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
-}
+};
