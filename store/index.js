@@ -4,15 +4,15 @@ export const state = () => ({
 
 export const actions = {
   // хук nuxt который срабатывает на сервере при инциализации приложения
-  nuxtServerInit({ commit, dispatch }, { req }) {
-    console.log(req.session);
+  async nuxtServerInit({ commit, dispatch }, { req }) {
+    await dispatch('user/autoLogin', req.session);
   },
 
   // метод запросов
   // получает данные и урл на который отправлять запрос
   async req(_, { url, data }) {
     try {
-      const { error, result } = await this.$axios.$post('/' + url, JSON.stringify(data), {
+      const { error, result, logout } = await this.$axios.$post(url, JSON.stringify(data), {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -22,6 +22,10 @@ export const actions = {
         console.error(error);
 
         return null;
+      }
+
+      if (logout) {
+        return this.app.router.replace('/admin/login');
       }
 
       return result;
