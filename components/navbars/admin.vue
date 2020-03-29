@@ -19,7 +19,7 @@ export default {
       this.$router.replace('/admin/login');
     }
   }
-}
+};
 </script>
 
 <template>
@@ -46,7 +46,7 @@ export default {
                   <span>Профиль</span>
                 </a-menu-item>
                 <a-menu-item key="1">
-                  <span @click="logout" style="color: red">Выход</span>
+                  <span style="color: red" @click="logout">Выход</span>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>

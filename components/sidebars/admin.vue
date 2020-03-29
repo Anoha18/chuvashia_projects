@@ -25,21 +25,15 @@ export default {
       this.$router.push(e.key);
     }
   }
-}
+};
 </script>
 
 <template>
-  <a-layout-sider :trigger="null" collapsible v-model="collapsed">
+  <a-layout-sider v-model="collapsed" :trigger="null" collapsible>
     <div class="logo-wrapper">
       <app-logo />
-      <transition name="logo-label">
-        <div v-if="!collapsed" class="logo-label">
-          Чувашская республика<br>
-          Нацпроекты
-        </div>
-      </transition>
     </div>
-    <a-menu @click="handleClick" theme="dark" mode="vertical">
+    <a-menu theme="dark" mode="vertical" @click="handleClick">
       <a-menu-item key="/admin/">
         <a-icon type="user" />
         <span>Главная</span>

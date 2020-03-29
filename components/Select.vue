@@ -1,8 +1,12 @@
 <template>
   <div class="select">
-    <p class="select__ttl">{{ title }}</p>
+    <p class="select__ttl">
+      {{ title }}
+    </p>
     <div class="select__value">
-      <p class="select__value-text">Все</p>
+      <p class="select__value-text">
+        Все
+      </p>
       <svg class="select__value-icon">
         <use xlink:href="@/assets/img/svg/sprite.svg#arrow_down" />
       </svg>
@@ -11,21 +15,21 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      title: {
-        type: String,
-        required: false
-      },
-      options: {
-        type: Array,
-        required: true
-      }
+export default {
+  props: {
+    title: {
+      type: String,
+      // required: false
+    },
+    options: {
+      type: Array,
+      // required: true
     }
   }
+};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .select {
     &__ttl {
 

@@ -3,7 +3,7 @@
     <div class="container hdr__container">
       <div class="hdr__bb">
         <div class="hdr__b">
-          <Logo/>
+          <Logo />
         </div>
         <div class="hdr__b">
           <Nav />
@@ -14,15 +14,15 @@
 </template>
 
 <script>
-  import Logo from '@/components/Logo';
-  import Nav from '@/components/Nav';
+import Logo from '@/components/Logo';
+import Nav from '@/components/Nav';
 
-  export default {
-    components: {
-      Logo,
-      Nav
-    }
+export default {
+  components: {
+    Logo,
+    Nav
   }
+};
 
 </script>
 

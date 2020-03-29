@@ -1,23 +1,25 @@
 <template>
-  <div :class="'btn btn_t_' + type + ' ' + 'btn_s_' + size + ' ' + className">{{ text }}</div>
+  <div :class="'btn btn_t_' + type + ' ' + 'btn_s_' + size + ' ' + className">
+    {{ text }}
+  </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      type: {
-        type: String,
-        default: 'primary'
-      },
-      size: {
-        type: String,
-        default: 'l'
-      },
-      text: String,
-      icon: String,
-      className: String
-    }
+export default {
+  props: {
+    type: {
+      type: String,
+      default: 'primary'
+    },
+    size: {
+      type: String,
+      default: 'l'
+    },
+    text: String,
+    icon: String,
+    className: String
   }
+};
 </script>
 
 <style scoped>

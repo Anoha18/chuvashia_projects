@@ -3,4 +3,4 @@ export default ({ store, redirect }) => {
   if (!store.getters['user/isAuth']) {
     return redirect('/admin/login');
   }
-}
+};

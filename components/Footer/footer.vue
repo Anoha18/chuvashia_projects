@@ -3,26 +3,26 @@
     <div class="container ftr__container">
       <div class="ftr__bb">
         <div class="ftr__b ftr__b_1">
-          <Logo type="ftr"/>
-<!--          <Button className="ftr__btn" text="Обратная связь"/>-->
+          <Logo type="ftr" />
+          <!--          <Button className="ftr__btn" text="Обратная связь"/>-->
         </div>
-        <div class="ftr__b"></div>
-        <div class="ftr__b"></div>
+        <div class="ftr__b" />
+        <div class="ftr__b" />
       </div>
     </div>
   </footer>
 </template>
 
 <script>
-  import Logo from '@/components/Logo';
-  import Button from '@/components/Button';
+import Logo from '@/components/Logo';
+import Button from '@/components/Button';
 
-  export default {
-    components: {
-      Logo,
-      Button
-    }
+export default {
+  components: {
+    Logo,
+    // Button
   }
+};
 </script>
 
 <style scoped>
@@ -52,4 +52,3 @@
     margin-left: calc(2.7rem + 9px);
   }
 </style>
-

@@ -5,17 +5,13 @@ export default {
   components: {
     AppLogo
   },
-  head() {
-    return {
-      title: `Автризация в панели администратора | ${process.env.APP_NAME}`
-    };
-  },
+  layout: false,
   data() {
     return {
       login: '',
       password: '',
       process: false
-    }
+    };
   },
   beforeCreate() {
     this.form = this.$form.createForm(this, { name: 'normal_login' });
@@ -44,8 +40,13 @@ export default {
       this.process = false;
       this.$router.replace('/admin');
     }
+  },
+  head() {
+    return {
+      title: `Автризация в панели администратора | ${process.env.APP_NAME}`
+    };
   }
-}
+};
 </script>
 
 <template>
@@ -59,17 +60,17 @@ export default {
         </div>
       </div>
       <a-form
-        style="width: 300px"
         id="components-form-demo-normal-login"
+        style="width: 300px"
         :form="form"
-        @submit="auth"
         class="login-form"
+        @submit="auth"
       >
         <a-form-item :style="{marginBottom: '0'}">
           <a-input
             v-model="login"
-            @keypress.enter="auth"
             placeholder="Логин"
+            @keypress.enter="auth"
           >
             <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
           </a-input>
@@ -77,9 +78,9 @@ export default {
         <a-form-item :style="{marginBottom: '0'}">
           <a-input
             v-model="password"
-            @keypress.enter="auth"
             type="password"
             placeholder="Пароль"
+            @keypress.enter="auth"
           >
             <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
           </a-input>
@@ -88,7 +89,7 @@ export default {
           <a class="login-form-forgot" href="#0">
             Восстановить пароль
           </a>
-          <a-button :disabled="process" @click="auth" type="primary" html-type="submit" class="login-form-button">
+          <a-button :disabled="process" type="primary" html-type="submit" class="login-form-button" @click="auth">
             Войти
           </a-button>
           <nuxt-link to="/" type="default" tag="a-button" class="login-form-button">

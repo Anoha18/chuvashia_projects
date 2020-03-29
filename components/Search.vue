@@ -8,13 +8,13 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        searchTerm: ''
-      }
-    }
+export default {
+  data() {
+    return {
+      searchTerm: ''
+    };
   }
+};
 </script>
 <style scoped>
   .search {

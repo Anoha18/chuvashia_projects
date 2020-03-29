@@ -2,13 +2,13 @@
   <div class="card-project">
     <div class="card-project__glr">
       <div class="card-project__slr">
-        <img src="@/assets/img/projects/1/1.jpg" alt="Картинка" />
+        <img src="@/assets/img/projects/1/1.jpg" alt="Картинка">
       </div>
       <div class="card-project__glr-status">
         <svg class="card-project__glr-btn">
           <use xlink:href="~/assets/img/svg/sprite.svg#arrow_left" />
         </svg>
-        <div class="card-project__glr-dots"></div>
+        <div class="card-project__glr-dots" />
         <svg class="card-project__glr-btn">
           <use xlink:href="~/assets/img/svg/sprite.svg#arrow_right" />
         </svg>
@@ -16,46 +16,54 @@
     </div>
     <div class="card-project__content">
       <div class="card-project__ttl-wrapper">
-<!--        <svg class="card-project__ttl-icon">-->
-<!--          <use :xlink:href="'@/assets/img/svg/sprite.svg#' + icon" />-->
-<!--        </svg>-->
-        <img src="@/assets/img/svg/medicine.svg" alt="Медицина" class="card-project__ttl-icon"/>
-        <p class="card-project__ttl">Здравоохранение</p>
+        <!--        <svg class="card-project__ttl-icon">-->
+        <!--          <use :xlink:href="'@/assets/img/svg/sprite.svg#' + icon" />-->
+        <!--        </svg>-->
+        <img src="@/assets/img/svg/medicine.svg" alt="Медицина" class="card-project__ttl-icon">
+        <p class="card-project__ttl">
+          Здравоохранение
+        </p>
       </div>
-      <p class="card-project__subttl">Реализуется 51 региональный проект в рамках 11 национальных проектов</p>
+      <p class="card-project__subttl">
+        Реализуется 51 региональный проект в рамках 11 национальных проектов
+      </p>
       <div class="card-project__tasks">
-        <p class="card-project__tasks-ttl">Ключевые задачи:</p>
-        <div v-for="task in tasks" class="card-project__task">
+        <p class="card-project__tasks-ttl">
+          Ключевые задачи:
+        </p>
+        <div v-for="(task, index) in tasks" :key="index" class="card-project__task">
           <img :src="task.isDone ? require('@/assets/img/svg/check_circle.svg') : require('@/assets/img/svg/refresh.svg')" alt="Статус" class="card-project__task-icon">
-          <p class="card-project__task-ttl">{{ task.title }}</p>
+          <p class="card-project__task-ttl">
+            {{ task.title }}
+          </p>
         </div>
       </div>
-      <Button text="Узнать подробнее" size="l" class="card-project__btn"/>
+      <Button text="Узнать подробнее" size="l" class="card-project__btn" />
     </div>
   </div>
 </template>
 
 <script>
-  import Button from '@/components/Button';
+import Button from '@/components/Button';
 
-  export default {
-    components: {
-      Button
-    },
-    data() {
-      return {
-        icon: 'medicine',
-        tasks: [
-          { title: 'Выполненная задача: Развитие системы оказания первичной медико-санитарной помощи', isDone: true },
-          { title: 'Задача в процессе: Борьба с сердечно-сосудистыми заболеваниями', isDone: false },
-          { title: 'Задача в процессе', isDone: false }
-        ]
-      }
-    },
-    props: {
-      img: String
-    }
+export default {
+  components: {
+    Button
+  },
+  props: {
+    img: String
+  },
+  data() {
+    return {
+      icon: 'medicine',
+      tasks: [
+        { title: 'Выполненная задача: Развитие системы оказания первичной медико-санитарной помощи', isDone: true },
+        { title: 'Задача в процессе: Борьба с сердечно-сосудистыми заболеваниями', isDone: false },
+        { title: 'Задача в процессе', isDone: false }
+      ]
+    };
   }
+};
 </script>
 
 <style scoped>

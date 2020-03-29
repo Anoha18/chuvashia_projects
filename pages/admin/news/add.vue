@@ -5,11 +5,9 @@ export default {
       title: `Добавление новости | ${process.env.APP_NAME}`
     };
   }
-}
+};
 </script>
 
 <template>
-  <div>
-
-  </div>
+  <div />
 </template>
