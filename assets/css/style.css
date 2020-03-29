@@ -55,7 +55,9 @@ img {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1070px; } }
+    max-width: 1070px;
+    /*max-width: 950px;*/
+  } }
 
 @media (min-width: 1920px) {
   .container {
