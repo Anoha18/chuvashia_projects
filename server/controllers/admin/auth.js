@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const db = require('../../db');
 
-module.exports = async (req, res) => {
+module.exports = async(req, res) => {
   const params = req.body;
 
   if (!params) {

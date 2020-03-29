@@ -1,20 +1,24 @@
 <template>
   <div class="logo">
     <img src="@/assets/img/logo.png" alt="Лого" class="logo__img">
-    <p v-if="type === 'default'" class="logo__txt">Чувашская Республика<br /> национальные проекты</p>
-    <p v-else-if="type === 'ftr'" class="logo__txt">Реализация национальных проектов<br /> в Чувашской Республике</p>
+    <p v-if="type === 'default'" class="logo__txt">
+      Чувашская Республика<br> национальные проекты
+    </p>
+    <p v-else-if="type === 'ftr'" class="logo__txt">
+      Реализация национальных проектов<br> в Чувашской Республике
+    </p>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      type: {
-        type: String,
-        default: 'default'
-      }
+export default {
+  props: {
+    type: {
+      type: String,
+      default: 'default'
     }
   }
+};
 </script>
 
 <style scoped>

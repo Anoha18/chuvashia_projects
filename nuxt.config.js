@@ -28,10 +28,10 @@ module.exports = {
     '~assets/routes-transitions.scss',
     // '~/static/sass/style.scss',
     'ant-design-vue/dist/antd.css',
-    '~/assets/css/style.css',
-    '~/static/sass/style.scss',
-    '~/static/less/variables.less',
-    '~/static/less/style.less',
+    '~assets/css/style.css',
+    '~static/sass/style.scss',
+    '~static/less/variables.less',
+    '~static/less/style.less',
     'ant-design-vue/dist/antd.css'
   ],
   /*
@@ -51,11 +51,7 @@ module.exports = {
     // '@nuxtjs/stylelint-module'
   ],
   proxy: {
-<<<<<<< HEAD
-    // '/**': 'http://0.0.0.0:8000/'
-=======
-    '/api/**': 'http://0.0.0.0:3000/api'
->>>>>>> master
+    '/api/**': 'http://0.0.0.0:8000/api'
   },
   /*
   ** Nuxt.js modules

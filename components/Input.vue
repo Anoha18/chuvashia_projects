@@ -1,24 +1,26 @@
 <template>
   <div class="input">
-    <p class="input__ttl">{{ title }}</p>
-    <input type="text" value="value" placeholder="" class="input__field"/>
+    <p class="input__ttl">
+      {{ title }}
+    </p>
+    <input type="text" value="value" placeholder="" class="input__field">
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        value: ''
-      }
-    },
-    props: {
-      title: {
-        type: String,
-        required: true
-      }
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true
     }
+  },
+  data() {
+    return {
+      value: ''
+    };
   }
+};
 </script>
 
 <style scoped>

@@ -1,11 +1,11 @@
 <template>
-  <div class="page-projects"></div>
+  <div class="page-projects" />
 </template>
 
 <script>
-  export default {
-
-  }
+export default {
+  layout: 'main'
+};
 </script>
 
 <style>

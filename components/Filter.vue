@@ -1,7 +1,9 @@
 <template>
   <div class="filter">
     <div class="filter__ttl-wrapper">
-      <p class="filter__ttl">Фильтр</p>
+      <p class="filter__ttl">
+        Фильтр
+      </p>
       <svg class="filter__ttl-icon">
         <use xlink:href="@/assets/img/svg/sprite.svg#arrow-down" />
       </svg>
@@ -19,20 +21,20 @@
 </template>
 
 <script>
-  import Select from '@/components/Select';
-  import Input from '@/components/Input';
-  import Search from '@/components/Search';
+import Select from '@/components/Select';
+import Input from '@/components/Input';
+import Search from '@/components/Search';
 
-  export default {
-    components: {
-      Select,
-      Input,
-      Search
-    }
+export default {
+  components: {
+    Select,
+    Input,
+    Search
   }
+};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .filter {
     background: #fff;
     padding: 15px 20px;

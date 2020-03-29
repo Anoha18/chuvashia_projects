@@ -1,12 +1,14 @@
 <template>
   <div class="page page-news-item">
     <div class="container page__container">
-      <h1 class="page-news-item__ttl">В 2020 году у каждого жителя республики будет возможность посадить свой кедр</h1>
-      <div class="page-news-item__banner">
-
-      </div>
+      <h1 class="page-news-item__ttl">
+        В 2020 году у каждого жителя республики будет возможность посадить свой кедр
+      </h1>
+      <div class="page-news-item__banner" />
       <div class="page-news-item__content">
-        <p class="page-news-item__date">03.03.20</p>
+        <p class="page-news-item__date">
+          03.03.20
+        </p>
         <div class="page-news-item__description">
           <h2>Руководитель службы по контролю и надзору в сфере охраны окружающей среды, объектов животного мира и лесных отношений Югры Сергей Пикунов  рассказал о реализации в 2020 году портфеля проектов «Экология» на территории республики.</h2>
 
@@ -27,12 +29,12 @@
       <div class="page-news-item__others">
         <NewsItem
           v-for="item in items"
-          :key="item.id"
           :id="item.id"
+          :key="item.id"
           :direction="item.direction"
           :img="item.img"
           :title="item.title"
-          :previewText="item.previewText"
+          :preview-text="item.previewText"
           :date="item.date"
           :views="item.views"
         />
@@ -42,48 +44,47 @@
 </template>
 
 <script>
-  import NewsItem from "../../../components/NewsItem";
+import NewsItem from '../../../components/NewsItem';
 
-  export default {
-    components: {
-      NewsItem
-    },
-    data() {
-      return {
-        items: [
-          {
-            id: "3",
-            direction: "medicine",
-            title: "Главные специалисты Минздрава ответят на вопросы россиян о коронавирусе",
-            previewText: 'Портал "Национальные проекты Чувашской Республики" ведет хронику того, как страна справляется с новыми вызовами.',
-            img: "@/assets/img/news/aaa.jpg",
-            date: '03 март 2020',
-            views: 567
-          },
-          {
-            id: "4",
-            direction: "medicine",
-            title: "Главные специалисты Минздрава ответят на вопросы россиян о коронавирусе",
-            previewText: 'Портал "Национальные проекты Чувашской Республики" ведет хронику того, как страна справляется с новыми вызовами.',
-            img: "@/assets/img/news/aaa.jpg",
-            date: '03 март 2020',
-            views: 567
-          },
-          {
-            id: "5",
-            direction: "medicine",
-            title: "Главные специалисты Минздрава ответят на вопросы россиян о коронавирусе",
-            previewText: 'Портал "Национальные проекты Чувашской Республики" ведет хронику того, как страна справляется с новыми вызовами.',
-            img: "@/assets/img/news/aaa.jpg",
-            date: '03 март 2020',
-            views: 567
-          }
-        ]
-      }
-    },
-    props: {
-      title: String
-    }
+export default {
+  components: {
+    NewsItem
+  },
+  props: {
+    title: String
+  },
+  data() {
+    return {
+      items: [
+        {
+          id: '3',
+          direction: 'medicine',
+          title: 'Главные специалисты Минздрава ответят на вопросы россиян о коронавирусе',
+          previewText: 'Портал "Национальные проекты Чувашской Республики" ведет хронику того, как страна справляется с новыми вызовами.',
+          img: '@/assets/img/news/aaa.jpg',
+          date: '03 март 2020',
+          views: 567
+        },
+        {
+          id: '4',
+          direction: 'medicine',
+          title: 'Главные специалисты Минздрава ответят на вопросы россиян о коронавирусе',
+          previewText: 'Портал "Национальные проекты Чувашской Республики" ведет хронику того, как страна справляется с новыми вызовами.',
+          img: '@/assets/img/news/aaa.jpg',
+          date: '03 март 2020',
+          views: 567
+        },
+        {
+          id: '5',
+          direction: 'medicine',
+          title: 'Главные специалисты Минздрава ответят на вопросы россиян о коронавирусе',
+          previewText: 'Портал "Национальные проекты Чувашской Республики" ведет хронику того, как страна справляется с новыми вызовами.',
+          img: '@/assets/img/news/aaa.jpg',
+          date: '03 март 2020',
+          views: 567
+        }
+      ]
+    };
   }
+};
 </script>
-

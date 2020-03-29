@@ -1,3 +1,3 @@
 <template>
-  <div class="page-calendar"></div>
+  <div class="page-calendar" />
 </template>

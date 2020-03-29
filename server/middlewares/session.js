@@ -7,7 +7,7 @@ const sessionOptions = {
   resave: false,
   saveUninitialized: true,
   cookie: {
-    maxAge: 365 * 24 * 60 * 60 * 1000,
+    maxAge: 365 * 24 * 60 * 60 * 1000
   },
   store: new PostgreSqlStore({
     conObject: connection,

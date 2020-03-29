@@ -1,29 +1,31 @@
 <template>
   <div class="card-plan">
     <div class="card-plan__ttl">
-      <img src="@/assets/img/svg/arrows_left_double.svg" alt="Стрелки" class="card-plan__ttl-arrows"/>
+      <img src="@/assets/img/svg/arrows_left_double.svg" alt="Стрелки" class="card-plan__ttl-arrows">
       <span>{{ id }} год</span>
-      <img src="@/assets/img/svg/arrows_right_double.svg" alt="Стрелки" class="card-plan__ttl-arrows"/>
+      <img src="@/assets/img/svg/arrows_right_double.svg" alt="Стрелки" class="card-plan__ttl-arrows">
     </div>
     <div class="card-plan__items">
-      <p v-for="(item, index) in items" class="card-plan__item"><span class="card-plan__item-number">{{ index+1 }}.</span> {{ item }}</p>
+      <p v-for="(item, index) in items" :key="index" class="card-plan__item">
+        <span class="card-plan__item-number">{{ index+1 }}.</span> {{ item }}
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      id: {
-        type: String,
-        required: true
-      },
-      items: {
-        type: Array,
-        required: true
-      }
+export default {
+  props: {
+    id: {
+      type: String,
+      required: true
+    },
+    items: {
+      type: Array,
+      required: true
     }
   }
+};
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 const main = require('../routes/main');
-const admin = require('../routes/admin')
+const admin = require('../routes/admin');
 const parsers = require('./parsers');
 const session = require('./session');
 
