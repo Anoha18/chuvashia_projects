@@ -25,7 +25,8 @@
     "express-session": "^1.17.0",
     "jsonwebtoken": "^8.5.1",
     "nuxt": "^2.0.0",
-    "pg": "^7.18.2"
+    "pg": "^7.18.2",
+    "vue-fullpage.js": "^0.1.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

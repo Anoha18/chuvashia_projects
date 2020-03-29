@@ -1,0 +1,105 @@
+// Font
+$mainFont                	: 'Gilroy', Helvetica, Arial, sans-serif;
+
+// Size
+$mainFontColor           	: #101010;
+$mainFontSize            	: 16px;
+$mainFontWeight          	: 400;
+$mainLineHeight          	: 1.4;
+
+// Resolutions
+$phoneWidthExtraSmall		: 320px;	// iPhone 5
+$phoneWidthSmall 			: 360px;	// GalaxyS5
+$phoneWidthMedium 			: 375px;	// iPhone 6/7/8
+$phoneWidthBig				: 410px;	// Pixel 2, iPhone 6/7/8 Plus
+$phoneWidth					: 480px;
+$phoneWidthLarge			: 576px;
+$tabletWidth				: 768px;	// iPad
+$tabletWidthLarge			: 992px;	//
+$desktopWidth				: 1200px;
+$desktopWidthMedium			: 1440px;
+$desktopWidthBig			: 1650px;
+$desktopWidthLarge			: 1920px;	// FullHD
+
+// Main color
+$color-primary				: #ea0029;
+$color-primary-light		: #ff254b;
+$color-secondary			: #622a54;
+$color-advanced				: #c50836;
+
+// Gradients
+$gradient-primary			: linear-gradient(0deg, rgb(69,37,100) 0%, rgb(234,0,41) 100%);
+$gradient-primary-inverted	: linear-gradient(0deg, rgb(234,0,41) 0%, rgb(69,37,100) 100%);
+$gradient-primary-hover		: linear-gradient(0deg, darken(rgb(69,37,100),5%) 0%, darken(rgb(234,0,41),5%) 100%);
+
+.container, .container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: $phoneWidthLarge) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: $tabletWidth) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: $tabletWidthLarge) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: $desktopWidth) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: $desktopWidthLarge) {
+  .container {
+    max-width: 1170px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: ($tabletWidth - 0.02px)) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+@media (min-width: $tabletWidth) and (max-width: ($tabletWidthLarge - 0.02px)) {
+  .tablet-hide {
+    display: none !important;
+  }
+}
+@media (min-width: $tabletWidthLarge) and (max-width: ($desktopWidth - 0.02px)) {
+  .tablet_large-hide {
+    display: none !important;
+  }
+}
+@media screen and (min-width: $desktopWidth) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: $tabletWidthLarge) and (max-width: ($desktopWidthBig - 0.02px)) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: $phoneWidthMedium) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: ($phoneWidthSmall)) {
+  html {
+    font-size: 14px;
+  }
+}
