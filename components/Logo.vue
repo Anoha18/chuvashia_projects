@@ -1,13 +1,9 @@
 <template>
-  <div class="logo">
+  <nuxt-link to="/" class="logo">
     <img src="@/assets/img/logo.png" alt="Лого" class="logo__img">
-    <p v-if="type === 'default'" class="logo__txt">
-      Чувашская Республика<br> национальные проекты
-    </p>
-    <p v-else-if="type === 'ftr'" class="logo__txt">
-      Реализация национальных проектов<br> в Чувашской Республике
-    </p>
-  </div>
+    <p v-if="type === 'default'" class="logo__txt">Чувашская Республика<br /> национальные проекты</p>
+    <p v-else-if="type === 'ftr'" class="logo__txt">Реализация национальных проектов<br /> в Чувашской Республике</p>
+  </nuxt-link>
 </template>
 
 <script>

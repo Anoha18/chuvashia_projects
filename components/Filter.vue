@@ -5,7 +5,7 @@
         Фильтр
       </p>
       <svg class="filter__ttl-icon">
-        <use xlink:href="@/assets/img/svg/sprite.svg#arrow-down" />
+        <use xlink:href="@/assets/img/svg/sprite.svg#arrow_down" />
       </svg>
     </div>
     <div class="filter__params">
@@ -39,22 +39,22 @@ export default {
     background: #fff;
     padding: 15px 20px;
     border-radius: 9px;
-    &__ttl {
-      &-wrapper {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1rem;
-      }
-      font-size: 1.5625rem;
-      line-height: 1.5625rem;
-      font-weight: bold;
-      color: #000;
-      text-transform: uppercase;
-      &-icon {
-        width: 24px;
-        height: 24px;
-        fill: #231F20;
-      }
-    }
+  }
+  .filter__ttl-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .filter__ttl {
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .filter__ttl-icon {
+    width: 24px;
+    height: 24px;
+    fill: #231F20;
   }
 </style>

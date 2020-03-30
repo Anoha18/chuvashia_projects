@@ -1,7 +1,5 @@
 <template>
-  <div :class="'btn btn_t_' + type + ' ' + 'btn_s_' + size + ' ' + className">
-    {{ text }}
-  </div>
+  <div :class="'btn btn_t_' + type + ' ' + 'btn_s_' + size + ' ' + className">{{ text }} <slot/> </div>
 </template>
 
 <script>
