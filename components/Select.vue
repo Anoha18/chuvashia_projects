@@ -4,7 +4,7 @@
     <div class="select__value">
       <p class="select__value-text">Все</p>
       <svg class="select__value-icon">
-        <use xlink:href="@/assets/img/svg/sprite.svg#arrow_down" />
+        <use xlink:href="@/assets/img/svg/sprite.svg#arrow_up" />
       </svg>
     </div>
   </div>
@@ -26,17 +26,8 @@
 </script>
 
 <style scoped>
-  .select {
-    &__ttl {
-
-    }
-    &__value {
-      &-text {
-
-      }
-      &-icon {
-
-      }
-    }
+  .select__value-icon {
+    width: 10px;
+    height: 10px;
   }
 </style>

@@ -22,19 +22,17 @@
 </script>
 
 <style scoped>
-  .input {
-    &__ttl {
-      font-size: .75rem;
-      line-height: .75rem;
-      font-weight: 400;
-      color: #000;
-      margin-bottom: 1rem;
-    }
-    &__field {
-      height: 42px;
-      background: #eee;
-      padding: 5px 10px;
-      border-radius: 6px;
-    }
+  .input__ttl {
+    font-size: .75rem;
+    line-height: .75rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  .input__field {
+    height: 42px;
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 6px;
   }
 </style>
