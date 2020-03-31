@@ -21,6 +21,7 @@
   .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
   .logo__img {
     height: 2.7rem;

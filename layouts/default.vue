@@ -19,9 +19,6 @@
 </script>
 
 <style>
-  .page__container {
-    /*padding-top: 50px;*/
-  }
   .page__ttl {
     font-size: 2.25rem;
     line-height: 2.625rem;
@@ -30,7 +27,7 @@
   }
   .page__section {
     /*height: 100vh;*/
-    padding: 45px 0;
+    padding: 3rem 0;
   }
   .page__section_1 {
     /*height: calc(100vh - 4.2rem - 50px);*/
@@ -48,5 +45,18 @@
     font-weight: 400;
     color: #000;
     margin-bottom: 2.3rem;
+  }
+
+  @media (max-width: 768px) {
+    .page {
+      padding-top: 4.2rem;
+    }
+    .page__section {
+      padding: 2rem 0;
+    }
+    .page__ttl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
   }
 </style>

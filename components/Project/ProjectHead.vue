@@ -44,4 +44,18 @@
   .project-head__info-row:not(:last-child) {
     margin-bottom: 5px;
   }
+
+  @media (max-width: 768px) {
+    .project-head__bb {
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-head__img-wrapper {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    .project-head__info {
+      text-align: center;
+    }
+  }
 </style>

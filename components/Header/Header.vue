@@ -48,4 +48,17 @@
   .hdr__b_2 {
     justify-content: flex-end;
   }
+
+  @media (max-width: 768px) {
+    .hdr {
+      z-index: 9;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .hdr__bb {
+      /*flex-direction: column;*/
+    }
+  }
 </style>

@@ -61,4 +61,10 @@
   .project-gallery__thumbs-arrow:hover {
     background: #e7e7e7;
   }
+
+  @media (max-width: 768px) {
+    .project-gallery__main {
+      height: auto;
+    }
+  }
 </style>

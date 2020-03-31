@@ -54,4 +54,11 @@
   .page-project__ttl {
     margin-bottom: 45px;
   }
+
+  @media (max-width: 768px) {
+    .page-project__ttl-label {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
 </style>

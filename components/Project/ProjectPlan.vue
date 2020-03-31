@@ -121,4 +121,19 @@
     width: calc(33.3% - 10px);
     margin-bottom: 20px;
   }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .project-plan__card {
+      width: calc(50% - 10px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .project-plan__cards {
+      flex-direction: column;
+    }
+    .project-plan__card {
+      width: 100%;
+    }
+  }
 </style>

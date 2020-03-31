@@ -17,7 +17,7 @@
           </div>
         </div>
         <p :class="'slide-main__descr slide-main__descr_t_' + type" v-html="description"></p>
-        <nuxt-link :to="type === 'projects' ? '/projects' : '/projects/'+type">
+        <nuxt-link :to="type === 'projects' ? '/projects' : '/projects/'+type" class="slide-main__btn-wrapper">
           <Button v-if="hasButton" size="l" class="slide-main__btn" :text="type === 'projects' ? 'Перейти к проектам' : 'Подробнее о проекте'"/>
         </nuxt-link>
         <div v-if="quoteAuthor" class="slide-main__quote">
@@ -25,12 +25,12 @@
           <p class="slide-main__quote-author">— {{ quoteAuthor }}</p>
         </div>
         <div v-if="slidesCount" class="slide-main__nav">
-          <img src="@/assets/img/svg/arrow_left.svg" alt="Влево" @click="fullpageApi && fullpageApi.moveSlideLeft()" class="slide-main__nav-btn" />
+          <img src="@/assets/img/svg/arrow_left.svg" alt="Влево" class="slide-main__nav-btn" />
           <div class="slide-main__nav-dots">
             <div class="slide-main__nav-dots-line"></div>
-            <div v-for="(dot, index) in Array.from({ length: slidesCount })" :class="'slide-main__nav-dot' + (index === slideIndex ? ' slide-main__nav-dot_active' : '')"></div>
+            <div v-for="(_, index) in Array.from({ length: slidesCount })" :class="'slide-main__nav-dot' + (index === slideIndex ? ' slide-main__nav-dot_active' : '')"></div>
           </div>
-          <img src="@/assets/img/svg/arrow_right.svg" alt="Вправо" @click="fullpageApi && fullpageApi.moveSlideRight()" class="slide-main__nav-btn" />
+          <img src="@/assets/img/svg/arrow_right.svg" alt="Вправо" class="slide-main__nav-btn" />
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
       quoteAuthor: String,
       slidesCount: Number,
       slideIndex: Number,
-      fullpageApi: Object,
+      // fullpageApi: Object,
       page: String
     }
   }
@@ -163,6 +163,8 @@
     line-height: 3.2rem;
     font-weight: bold;
     color: #fff;
+    /*width: 50rem;*/
+    /*max-width: 100%;*/
   }
   .slide-main__indicators {
     display: flex;
@@ -181,8 +183,8 @@
     margin-right: 120px;
   }
   .slide-main__indicator-icon {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -192,16 +194,21 @@
   .slide-main__descr {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    /*width: 50rem;*/
+    /*max-width: 100%;*/
     margin-bottom: 5rem;
   }
   .slide-main__descr_t_education {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
-  .slide-main__btn {
-    padding: 15px 37px;
-    border-radius: 3px;
+  .slide-main__btn-wrapper {
+    text-decoration: none;
     margin-bottom: 5rem;
+  }
+  .slide-main__btn {
+    padding: 17px 37px;
+    border-radius: 3px;
   }
   .slide-main__quote {
     max-width: 100%;
@@ -261,5 +268,62 @@
   }
   .slide-main__nav-dot:not(:last-child) {
     margin-right: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .slide-main__content {
+      padding-top: 3rem;
+    }
+    .slide-main__content_t_projects {
+      padding-top: 3rem;
+    }
+    .slide-main__supttl {
+      font-size: 1rem;
+      line-height: 1rem;
+      margin-bottom: .5rem;
+    }
+    .slide-main__ttl {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+    .slide-main__ttl-circle {
+      width: 3rem;
+      height: 3rem;
+      margin-left: 10px;
+    }
+    .slide-main__indicator {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    .slide-main__indicator:not(:last-child) {
+      margin-right: 10px;
+    }
+    .slide-main__indicator-icon {
+      width: 1.5625rem;
+      height: 1.5625rem;
+      min-width: 1.5625rem;
+    }
+    .slide-main__descr {
+      font-size: 1rem;
+      line-height: 1.375rem;
+      margin-bottom: 1rem;
+    }
+
+    .slide-main__btn-wrapper {
+      margin-bottom: 2rem;
+    }
+    .slide-main__btn {
+      padding: 13px 30px;
+    }
+    .slide-main__quote {
+      font-size: .9375rem;
+      line-height: 1.25rem;
+    }
+    .slide-main__nav {
+      bottom: 80px;
+    }
+    .slide-main__nav-dot:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 </style>

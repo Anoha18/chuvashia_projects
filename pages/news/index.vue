@@ -1,48 +1,45 @@
 <template>
   <div class="page page-news">
-    <div class="container page__container">
-      <Filter/>
-      <div class="page-news__ttl-wrapper">
-        <p class="page__ttl">Новости</p>
-        <Select :options="[]"/>
-      </div>
-      <div class="page-news__items-wrapper">
-        <div class="page-news__items">
-          <CardNews/>
-          <NewsItem
-            v-for="item in items"
-            :key="item.id"
-            :id="item.id"
-            :direction="item.direction"
-            :img="item.img"
-            :title="item.title"
-            :previewText="item.previewText"
-            :date="item.date"
-            :views="item.views"
-          />
+    <section class="section page__section">
+      <div class="container page__container">
+        <FilterComponent class="page-news__filter"/>
+        <div class="page-news__ttl-wrapper">
+          <p class="page__ttl">Новости</p>
+          <Select :items="['По популярности', 'По дате публикации']" defaultValue="По популярности" theme="light" class="page-news__sort"/>
         </div>
-        <div class="page-news__btn">Показать еще</div>
+        <div class="page-news__items-wrapper">
+          <div class="page-news__items">
+            <CardNews v-bind="itemMain" class="page-news__item"/>
+            <NewsItem
+              v-for="item in items"
+              :key="item.id"
+              v-bind="item"
+              class="page-news__item"
+            />
+          </div>
+          <div class="page-news__btn">Показать еще</div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
-  import Filter from "@/components/Filter";
+  import FilterComponent from "@/components/FilterComponent";
   import Select from "@/components/Select";
   import CardNews from "@/components/Card/CardNews";
   import NewsItem from "@/components/NewsItem";
 
   export default {
     components: {
-      Filter,
+      FilterComponent,
       Select,
       CardNews,
       NewsItem
     },
     data() {
       return {
-        main: {
+        itemMain: {
           id: "1",
           direction: "culture",
           title: "В 2020 году у каждого жителя республики будет возможность посадить свой кедр",
@@ -93,18 +90,30 @@
   }
   .page-news__ttl-wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .page-news__filter {
+    margin-bottom: 1.5rem;
+  }
+  .page-news__sort {
+    width: 270px;
+    max-width: 100%;
   }
   .page-news__items-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
   }
   .page-news__items {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+  }
+  .page-news__item:not(:last-child) {
+    margin-bottom: 15px;
   }
   .page-news__btn {
     background: #ffffff;
@@ -120,5 +129,17 @@
   .page-news__btn:hover {
     background: #00203F;
     color: #fff;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .page-news__sort {
+      width: 220px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .page-news__sort {
+      width: 200px;
+    }
   }
 </style>

@@ -51,6 +51,10 @@
   .project-budget__diagram {
     margin-right: 75px;
   }
+  .project-budget__content {
+    display: flex;
+    flex-direction: column;
+  }
   .project-budget__descr {
     font-size: 1.375rem;
     margin-bottom: 2rem;
@@ -82,5 +86,18 @@
   .project-budget__legend-ttl {
     font-size: 1.125rem;
     line-height: 1.125rem;
+  }
+
+  @media (max-width: 768px) {
+    .project-budget__bb {
+      flex-direction: column;
+    }
+    .project-budget__diagram {
+      margin-right: 0;
+    }
+    .project-budget__legend {
+      order: -1;
+      margin: 1rem 0;
+    }
   }
 </style>

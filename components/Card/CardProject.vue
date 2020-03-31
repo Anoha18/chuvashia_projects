@@ -16,9 +16,6 @@
     </div>
     <div class="card-project__content">
       <div class="card-project__ttl-wrapper">
-<!--        <svg class="card-project__ttl-icon">-->
-<!--          <use :xlink:href="'@/assets/img/svg/sprite.svg#' + icon" />-->
-<!--        </svg>-->
         <img src="@/assets/img/svg/medicine.svg" alt="Медицина" class="card-project__ttl-icon"/>
         <p class="card-project__ttl">Здравоохранение</p>
       </div>
@@ -68,7 +65,9 @@
   }
   .card-project__glr {
     position: relative;
+    display: flex;
     width: 60%;
+    min-width: 60%;
   }
   .card-project__glr-status {
     position: absolute;
@@ -79,6 +78,10 @@
   .card-project__glr-btn {
     width: 15px;
     height: 15px;
+  }
+  .card-project__slr {
+    display: flex;
+    width: 100%;
   }
   .card-project__content {
     background: #fff;
@@ -129,6 +132,21 @@
     margin-right: 12px;
   }
   .card-project__btn {
+    padding: 13px 40px;
+    border-radius: 3px;
     margin: auto;
+  }
+
+  @media (max-width: 768px) {
+    .card-project {
+      flex-direction: column;
+    }
+    .card-project__glr {
+      width: 100%;
+      min-width: 100%;
+    }
+    .card-project__content {
+      /*order: -1;*/
+    }
   }
 </style>

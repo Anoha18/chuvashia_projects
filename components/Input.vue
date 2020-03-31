@@ -1,7 +1,7 @@
 <template>
   <div class="input">
     <p class="input__ttl">{{ title }}</p>
-    <input type="text" value="value" placeholder="" class="input__field"/>
+    <input type="text" v-model="value" placeholder="" class="input__field"/>
   </div>
 </template>
 
@@ -23,16 +23,18 @@
 
 <style scoped>
   .input__ttl {
-    font-size: .75rem;
-    line-height: .75rem;
-    font-weight: 400;
+    font-size: .8125rem;
+    line-height: .8125rem;
+    font-weight: 700;
     color: #000;
-    margin-bottom: 1rem;
+    text-transform: uppercase;
+    margin-bottom: .6rem;
   }
   .input__field {
-    height: 42px;
+    height: 2.8rem;
+    width: 100%;
     background: #eee;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 6px;
   }
 </style>

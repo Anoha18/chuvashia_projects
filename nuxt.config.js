@@ -14,7 +14,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' }
     ]
   },
   /*
@@ -35,7 +35,8 @@ module.exports = {
   */
   plugins: [
     '@/plugins/antd-ui',
-    { src: '~/plugins/fullpage', mode: 'client' }
+    { src: '~/plugins/fullpage', mode: 'client' },
+    { src: '~/plugins/ymapPlugin.js',  mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -77,7 +78,7 @@ module.exports = {
     }
   },
   server: {
-    port: 8000, // default: 3000
+    port: 8001, // default: 3000
     host: 'localhost' // default: localhost
   }
 };
