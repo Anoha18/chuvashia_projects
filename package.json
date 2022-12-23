@@ -25,7 +25,7 @@
     "express": "^4.16.4",
     "express-session": "^1.17.0",
     "js-cookie": "^2.2.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "nuxt": "^2.0.0",
     "pg": "^7.18.2",
     "vue-fullpage.js": "^0.1.5"
